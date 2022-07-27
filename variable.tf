@@ -20,4 +20,8 @@ variable "private_cidrs" {
      default = ["10.1.1.0/24", "10.1.2.0/24",]
 }
 variable "routing_table_public_name" {}
+variable "sg_name" {
+  default = "allow_all_traffic"
+}
+variable "key_name" {}
 
