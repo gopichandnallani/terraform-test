@@ -36,4 +36,9 @@ variable "amis" {
      }
   
 }
+variable "iamusers" {
+     description = "list of user names to create users "
+     type = list
+     default = ["Gopi", "Chand", "nallani"]  
+}
 
