@@ -2,7 +2,7 @@ resource "aws_ebs_volume" "additional_volume" {
     count = 1
     type = "standard"
     availability_zone = var.azs[count.index]
-    size              = 40  #change the size of the volume to the 10Gb later.
+    size              = 10  #change the size of the volume to the 10Gb later.
     tags = {
       Name = "Additional-volume"
       Owner = "Terraform"
