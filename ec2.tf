@@ -15,7 +15,7 @@ template = file("userdata.sh")
 
 resource "aws_instance" "web-1" {
     count     = 1
-    ami       = "${data.aws_ami.ubuntu.id}"
+    ami       = lookup(var.amis, var.region, "us-east-1")
     instance_type = "t2.micro"
     key_name        = var.key_name
     subnet_id       = aws_subnet.public.*.id[count.index]
