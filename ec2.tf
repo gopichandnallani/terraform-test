@@ -27,3 +27,9 @@ resource "aws_instance" "web-1" {
         Owner = "Terraform"
     }
 }
+
+resource "null_resource" "null_resource_test" {
+    provisioner "local-exec" {
+        command = "echo ${aws_instance.web-1.0.public_ip} >> details && echo ${aws_instance.web-1.0.private_ip} >> details "
+    }
+}

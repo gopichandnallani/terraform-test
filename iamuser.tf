@@ -22,6 +22,6 @@ resource "aws_iam_policy" "feature_dev_policy" {
 
 resource "aws_iam_user_policy_attachment" "Feature-dev-attach" {
     count = length(var.iamusers)
-    user = aws_iam_user.feature-dev[count.index]
+    user = aws_iam_user.feature-dev.*.name[count.index]
     policy_arn = aws_iam_policy.feature_dev_policy.arn
 }
