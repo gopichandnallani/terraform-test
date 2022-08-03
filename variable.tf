@@ -2,6 +2,10 @@ variable "vpc_cidr" {
      description = "CIDR block for the VPC"
      default = "10.1.0.0/16"
 }
+variable "region" {
+     description = "region name to deploy the infra "
+     default = "us-east-1"
+}
 variable "vpc_name" {}
 variable "IGW_name" {}
 variable "public_cidrs" {
@@ -20,4 +24,21 @@ variable "private_cidrs" {
      default = ["10.1.1.0/24", "10.1.2.0/24",]
 }
 variable "routing_table_public_name" {}
+variable "sg_name" {
+  default = "allow_all_traffic"
+}
+variable "key_name" {}
+variable "amis" {
+     description = "assigning the amis based on the region"
+     default = {
+          us-east-1 = "ami-01e943e50a641f223"
+          us-east-2 = ""
+     }
+  
+}
+variable "iamusers" {
+     description = "list of user names to create users "
+     type = list
+     default = ["Gopi", "Chand", "nallani"]  
+}
 
