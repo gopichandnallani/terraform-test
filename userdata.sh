@@ -1,5 +1,5 @@
 #!/bin/bash
-
+echo "installing nginx and unzip"
 apt-get update -y
 apt-get install -y nginx
 systemctl start nginx
