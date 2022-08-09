@@ -6,6 +6,22 @@ module "vpc" {
       routing_table_public_name = var.routing_table_public_name
 }
 
+# module "vpc1" {
+#       source = "./module/vpc"
+#       vpc_cidr = "192.168.0.0/16"
+#       vpc_name = "test-peer vpc "
+#       IGW_name = "Peer-Igw"
+#       routing_table_public_name = "peer-public-RT"
+#       public_cidrs = ["192.168.1.0/24", "192.168.2.0/24"]
+# }
+
+# module "vpc_peering" {
+#       source = "./module/vpcpeering"
+#       peer_owner_id = var.peer_owner_id
+#       vpc_id = module.vpc.vpc_id
+#       vpc1_id = module.vpc1.vpc_id
+# }
+
 module "securitygroup" {
       source = "./module/securitygroup"
       sg_name = var.sg_name

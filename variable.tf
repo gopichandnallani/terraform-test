@@ -9,3 +9,6 @@ variable "sg_name" {}
 variable "key_name" {
      description = "provide the key paie name to use to create the instance with"  
 }
+variable "peer_owner_id" {
+     description = "provide the aws account id "  
+}
