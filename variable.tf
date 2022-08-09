@@ -42,3 +42,7 @@ variable "iamusers" {
      default = ["Gopi", "Chand", "nallani"]  
 }
 
+variable "route53zone_name" {
+     description = "provide the name for the route53 zone to create in the environment "
+     default = "gopinallani.xyz"
+}

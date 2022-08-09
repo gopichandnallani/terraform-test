@@ -1,13 +1,13 @@
-data "aws_ami" "ubuntu" {
-    owners           = ["373042721571"]
-    most_recent      = true
+# data "aws_ami" "ubuntu" {
+#     owners           = ["373042721571"]
+#     most_recent      = true
 
 
-  filter {
-    name   = "name"
-    values = ["image-test"]
-  }
-}
+#   filter {
+#     name   = "name"
+#     values = ["image-test"]
+#   }
+# }
 
 data "template_file" "user_data" {
 template = file("userdata.sh")
