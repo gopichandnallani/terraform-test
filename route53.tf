@@ -6,3 +6,10 @@ resource "aws_route53_zone" "primary" {
   }
 }
 
+resource "aws_route53_record" "www" {
+  zone_id = aws_route53_zone.primary.zone_id
+  name    = "www.${var.route53zone_name}"
+  type    = "A"
+  ttl     = 300
+  records = aws_instance.web-1.*.public_ip
+}

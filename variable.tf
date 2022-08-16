@@ -31,7 +31,7 @@ variable "key_name" {}
 variable "amis" {
      description = "assigning the amis based on the region"
      default = {
-          us-east-1 = "ami-01e943e50a641f223"
+          us-east-1 = "ami-08d4ac5b634553e16"
           us-east-2 = ""
      }
   
@@ -44,5 +44,5 @@ variable "iamusers" {
 
 variable "route53zone_name" {
      description = "provide the name for the route53 zone to create in the environment "
-     default = "gopinallani.xyz"
+     default = "trainings.gopinallani.xyz"
 }
