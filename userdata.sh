@@ -7,4 +7,4 @@ systemctl enable nginx
 apt-get install unzip
 
 
-git clone git@github.com:gopichandnallani/webpage-test.git /var/www/html/home
+git clone https://github.com/gopichandnallani/webpage-test.git /var/www/html/home
