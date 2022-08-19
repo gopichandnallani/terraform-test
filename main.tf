@@ -35,3 +35,8 @@ module "ec2" {
       securitygroupid = module.securitygroup.securitygroup_id
       subnetid = module.vpc.public_subnet_id[count.index]
 }
+
+module "route53" {
+      source = "./module/route53"
+      route53zone_name = var.route53_zone_name
+}

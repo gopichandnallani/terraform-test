@@ -1,2 +1,1 @@
-variable "route53_zone_name" {}
-variable "instance_publicip" {}
+variable "route53zone_name" {}
