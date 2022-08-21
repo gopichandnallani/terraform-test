@@ -46,3 +46,11 @@ variable "route53zone_name" {
      description = "provide the name for the route53 zone to create in the environment "
      default = "trainings.gopinallani.xyz"
 }
+variable "aws_lb_name" {
+     description = "provide name for the aws alb "
+     default = "Bittergourd-lb"
+}
+variable "targetgroup_name" {
+     description = "provide name for the target group "
+     default = "Bittergourd-alb-arget-group"
+}
