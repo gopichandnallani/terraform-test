@@ -4,7 +4,7 @@ resource "aws_lb" "test" {
   load_balancer_type = "application"
   security_groups    = [aws_security_group.allow_all.id]
   subnets            = [for subnet in aws_subnet.public : subnet.id]
-  ip_address_type   = "ipv4"
+  ip_address_type    = "ipv4"
 
 
   tags = {

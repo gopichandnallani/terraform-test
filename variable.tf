@@ -1,27 +1,27 @@
 variable "vpc_cidr" {
-     description = "CIDR block for the VPC"
-     default = "10.1.0.0/16"
+  description = "CIDR block for the VPC"
+  default     = "10.1.0.0/16"
 }
 variable "region" {
-     description = "region name to deploy the infra "
-     default = "us-east-1"
+  description = "region name to deploy the infra "
+  default     = "us-east-1"
 }
 variable "vpc_name" {}
 variable "IGW_name" {}
 variable "public_cidrs" {
-     description = "CIDR blocks for the public subnets"
-     type = list
-     default = ["10.1.10.0/24", "10.1.20.0/24"]
+  description = "CIDR blocks for the public subnets"
+  type        = list(any)
+  default     = ["10.1.10.0/24", "10.1.20.0/24"]
 }
 variable "azs" {
-     description = "availiability zones for the subnets"
-     type = list
-     default = ["us-east-1a", "us-east-1b",]
+  description = "availiability zones for the subnets"
+  type        = list(any)
+  default     = ["us-east-1a", "us-east-1b", ]
 }
 variable "private_cidrs" {
-     description = "CIDR block for the private subnets"
-     type = list
-     default = ["10.1.1.0/24", "10.1.2.0/24",]
+  description = "CIDR block for the private subnets"
+  type        = list(any)
+  default     = ["10.1.1.0/24", "10.1.2.0/24", ]
 }
 variable "routing_table_public_name" {}
 variable "sg_name" {
@@ -29,28 +29,28 @@ variable "sg_name" {
 }
 variable "key_name" {}
 variable "amis" {
-     description = "assigning the amis based on the region"
-     default = {
-          us-east-1 = "ami-08d4ac5b634553e16"
-          us-east-2 = ""
-     }
-  
+  description = "assigning the amis based on the region"
+  default = {
+    us-east-1 = "ami-08d4ac5b634553e16"
+    us-east-2 = ""
+  }
+
 }
 variable "iamusers" {
-     description = "list of user names to create users "
-     type = list
-     default = ["Gopi", "Chand", "nallani"]  
+  description = "list of user names to create users "
+  type        = list(any)
+  default     = ["Gopi", "Chand", "nallani"]
 }
 
 variable "route53zone_name" {
-     description = "provide the name for the route53 zone to create in the environment "
-     default = "trainings.gopinallani.xyz"
+  description = "provide the name for the route53 zone to create in the environment "
+  default     = "trainings.gopinallani.xyz"
 }
 variable "aws_lb_name" {
-     description = "provide name for the aws alb "
-     default = "Bittergourd-lb"
+  description = "provide name for the aws alb "
+  default     = "Bittergourd-lb"
 }
 variable "targetgroup_name" {
-     description = "provide name for the target group "
-     default = "Bittergourd-alb-arget-group"
+  description = "provide name for the target group "
+  default     = "Bittergourd-alb-arget-group"
 }
