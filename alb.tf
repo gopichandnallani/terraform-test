@@ -38,6 +38,10 @@ resource "aws_lb_listener" "front_end" {
   }
 }
 
+resource "aws_lb_listener" "manual" {
+}
+
+
 resource "aws_lb_target_group" "manual-tg" {
   name        = var.targetgroup1_name
   target_type = "instance"
