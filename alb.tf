@@ -17,7 +17,7 @@ resource "aws_lb_target_group" "test-tg" {
   name        = var.targetgroup_name
   target_type = "instance"
   port        = 80
-  protocol    = "TCP"
+  protocol    = "HTTP"
   vpc_id      = aws_vpc.main.id
 }
 
