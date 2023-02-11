@@ -39,5 +39,9 @@ resource "aws_lb_listener" "front_end" {
 }
 
 resource "aws_lb_target_group" "manual-tg" {
-  # (resource arguments)
+  name        = var.targetgroup1_name
+  target_type = "instance"
+  port        = 80
+  protocol    = "HTTP"
+  vpc_id      = aws_vpc.main.id
 }

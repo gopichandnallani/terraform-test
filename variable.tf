@@ -54,3 +54,8 @@ variable "targetgroup_name" {
   description = "provide name for the target group "
   default     = "Bittergourd-alb-arget-group"
 }
+
+variable "targetgroup1_name" {
+  description = "provide name for the target group "
+  default     = "Bittergourd-alb-arget-group"
+}
