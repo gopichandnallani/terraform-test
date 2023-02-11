@@ -37,3 +37,7 @@ resource "aws_lb_listener" "front_end" {
     target_group_arn = aws_lb_target_group.test-tg.arn
   }
 }
+
+resource "aws_lb_target_group" "manual-tg" {
+  # (resource arguments)
+}
