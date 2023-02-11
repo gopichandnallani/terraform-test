@@ -40,6 +40,8 @@ resource "aws_lb_listener" "front_end" {
 
 resource "aws_lb_listener" "manual" {
   default_action {
+    type             = "forward"
+    target_group_arn = aws_lb_target_group.manual-tg.arn
   }
 }
 
