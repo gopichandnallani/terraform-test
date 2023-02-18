@@ -59,3 +59,5 @@ variable "targetgroup1_name" {
   description = "provide name for the target group "
   default     = "manual-tg"
 }
+variable "ingress" {}
+variable "egress" {}
