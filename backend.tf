@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket = "gopichandvcc"
-    key    = "terraform/"
+    key    = "dev/"
     region = "us-east-1"
   }
 }
