@@ -6,11 +6,15 @@ output "vpc_id" {
   value = aws_vpc.main.id
 }
 output "public_subnet_id" {
-  value = aws_subnet.public.*.id
+  value = {
+    for k, v in aws_subnet.public: k => v.id
+  }
 }
 
 output "private_subnet_id" {
-  value = aws_subnet.private.*.id
+  value = {
+    for i, y in aws_subnet.private: i => y.id
+  }
 }
 
 output "security-groupid" {
